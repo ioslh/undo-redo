@@ -8,12 +8,18 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "fast-deep-equal": "^2.0.1",
+    "install": "^0.12.1",
+    "npm": "^6.4.1",
+    "rotate-resize": "0.0.4",
     "vue": "^2.5.17"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0",
     "@vue/cli-plugin-eslint": "^3.0.0",
     "@vue/cli-service": "^3.0.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
