@@ -131,6 +131,7 @@ export default {
   display: flex;
   flex-direction: column;
   background: #fff;
+  border-left: 1px solid blue;
 }
 h4 {
   margin-bottom: 20px;

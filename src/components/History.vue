@@ -122,6 +122,7 @@ export default {
       margin-top: -5px;
       background: #eee;
       border-radius: 50%;
+      transition: background .5s;
     }
     &.current::after {
       background: green;
