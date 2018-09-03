@@ -84,6 +84,7 @@ export default {
       flex: 1;
       color: #aaa;
       margin-bottom: 20px;
+      text-align: center;
       cursor: not-allowed;
       &.valid {
         cursor: pointer;

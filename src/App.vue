@@ -5,6 +5,10 @@
       <Info :rect="rect" @transformed="onTransformed" @record="record"/>
       <History :history="history" @command="execute" @cursor="moveCursor"/>
     </div>
+    <div class="ctrl-guide">
+      <p>Mousedown any control points to resize or rotate.</p>
+      <p>To resize with fixed ratio, hold <kbd>Shift</kbd> key.</p>
+    </div>
   </div>
 </template>
 
@@ -136,5 +140,25 @@ export default {
 h4 {
   margin-bottom: 20px;
   font-size: 20px;
+}
+.ctrl-guide {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+}
+kbd {
+  background-color: rgb(238, 238, 238);
+  border-radius: 3px;
+  border: 1px solid rgb(180, 180, 180);
+  box-shadow: 0 1px 1px rgba(0,0,0,.2), 0 2px 0 0 rgba(255,255,255,.7) inset;
+  color: rgb(51, 51, 51);
+  display: inline-block;
+  font-family: consolas,"Liberation Mono",courier,monospace;
+  font-size: .85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
 }
 </style>
