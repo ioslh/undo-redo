@@ -17,7 +17,6 @@ class History {
 
   get canRedo() {
     return this.snapshots.length > this.cursor + 1
-    // return true
   }
 
   record(snapshot) {
@@ -29,9 +28,10 @@ class History {
     }
 
     // 生成唯一的 id，确保在列表渲染时不会重用 DOM
-    // 这样生成的动画更好的表达新旧历史记录的替换
+    // 这样生成的动画更好的表现新旧历史记录的替换
     snapshot.uuid = fakeUUID()
     this.snapshots.push(snapshot)
+    // 确保历史记录条数限制
     if (this.snapshots.length > this.maxSnapshots) {
       this.snapshots.shift()
     }
