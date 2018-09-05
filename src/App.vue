@@ -8,6 +8,7 @@
     <div class="ctrl-guide">
       <p>Mousedown any control points to resize or rotate.</p>
       <p>To resize with fixed ratio, hold <kbd>Shift</kbd> key.</p>
+      <p><a href="https://github.com/ioslh/undo-redo" target="_blank">https://github.com/ioslh/undo-redo</a></p>
     </div>
   </div>
 </template>
