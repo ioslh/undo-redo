@@ -25,7 +25,9 @@ export default {
 
   computed: {
     displayKeys() {
-      return Object.keys(this.rect)
+      /* eslint-disable */
+      const { animation, ...rest } = this.rect
+      return Object.keys(rest)
     }
   },
 

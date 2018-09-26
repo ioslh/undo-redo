@@ -37,7 +37,8 @@ export default {
         y: 100,
         w: 100,
         h: 100,
-        r: 0
+        r: 0,
+        animation: false,
       }
     }
   },
@@ -47,13 +48,16 @@ export default {
   },
 
   methods: {
-    onTransformed(rectEnd) {
+    onTransformed(rectEnd, animation = false) {
+      const rect = {}
       const keys = ['x', 'y', 'w', 'h', 'r']
       keys.forEach(key => {
         if (key in rectEnd) {
-          this.rect[key] = rectEnd[key]
+          rect[key] = rectEnd[key]
         }
       })
+      rect.animation = animation
+      this.rect = rect
     },
 
     record() {
@@ -76,14 +80,14 @@ export default {
           // pass
       }
       if (snapshot) {
-        this.onTransformed(snapshot)
+        this.onTransformed(snapshot, true)
       }
     },
 
     moveCursor(cursor) {
       const snapshot = this.history.move(cursor)
       if (snapshot) {
-        this.onTransformed(snapshot)
+        this.onTransformed(snapshot, true)
       }
     }
   }

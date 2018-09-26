@@ -125,14 +125,20 @@ export default {
     },
 
     internalStyle() {
-      const { x, y, w, h, r } = this.rect
-      return {
+      const { x, y, w, h, r, animation } = this.rect
+      const s = {
         left: `${x}px`,
         top: `${y}px`,
         width: `${w}px`,
         height: `${h}px`,
         transform: `rotate(${r}deg)`
       }
+      if (animation) {
+        s['transition'] = 'all .5s'
+      } else {
+        s['transition'] = 'none'
+      }
+      return s
     },
 
     showHandlers() {
