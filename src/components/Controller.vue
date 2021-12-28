@@ -46,6 +46,7 @@ const handlers = [
   'cb',
   'rb'
 ]
+const rotateDeg = [-180, -135, -90, -45, 0, 45, 90, 135, 180];
 
 export default {
   props: {
@@ -181,6 +182,11 @@ export default {
           this.rectStart,
           this.fixedRatio
         )
+        rotateDeg.forEach(deg => {
+          if (Math.abs(deg - rectEnd.r) < 5) {
+            rectEnd.r = deg;
+          }
+        });
         this.$emit('transformed', rectEnd)
       }
     },
