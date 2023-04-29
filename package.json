@@ -11,7 +11,7 @@
   "dependencies": {
     "fast-deep-equal": "^2.0.1",
     "install": "^0.12.1",
-    "npm": "^6.4.1",
+    "npm": "^6.14.18",
     "rotate-resize": "0.0.4",
     "vue": "^2.5.17"
   },
